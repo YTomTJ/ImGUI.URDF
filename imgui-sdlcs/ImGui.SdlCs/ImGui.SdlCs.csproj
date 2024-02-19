@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Authors>YTom</Authors>
+    <Description>Merge ImGuiNET (https://github.com/mellinoe/imgui.net) with SDL2-CS (https://github.com/flibitijibibo/SDL2-CS), extend with some useful widgets.</Description>
+    <Version>1.2.6.2-alpha</Version>
+    <PackageProjectUrl>https://github.com/YTomTJ/ImGui.SdlCs</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTags>ImGui, SDL</PackageTags>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Ext\**" />
+    <EmbeddedResource Remove="Ext\**" />
+    <None Remove="Ext\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ImGui\SDL2_SdlRenderer_Window.cs" />
+    <Compile Remove="ImGui\SDL2_SdlRenderer_Window_Ext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ImGui.NET" Version="1.90.1.1" />
+    <PackageReference Include="OpenTK.Graphics" Version="4.8.2" />
+    <PackageReference Include="OpenTK.Windowing.Common" Version="4.8.2" />
+    <PackageReference Include="Silk.NET.SDL" Version="2.20.0" />
+  </ItemGroup>
+
+</Project>

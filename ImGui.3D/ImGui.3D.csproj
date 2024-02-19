@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <StartupObject>ImGui3D.TestWindow</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Example\**" />
+    <EmbeddedResource Remove="Example\**" />
+    <None Remove="Example\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\imgui-sdlcs\ImGui.SdlCs\ImGui.SdlCs.csproj" />
+    <ProjectReference Include="..\three-dotnet\THREE.OpenGL\THREE.OpenGL.csproj" />
+    <ProjectReference Include="..\three-dotnet\THREE\THREE.csproj" />
+    <ProjectReference Include="..\urdf-loader\urdf-loader.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NotoSansSC-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
