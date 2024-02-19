@@ -21,6 +21,6 @@ This project is a visualizer for URDF (https://wiki.ros.org/urdf).
 
 The URDF used for demo could be found at the repository of urdf-loaders (https://github.com/gkjohnson/urdf-loaders/tree/master/urdf/T12) .
 
-![A demo image.](demo\demo-T12.png)
+![A demo image.](./demo/demo-T12.png)
 
 NOTE: This version of ImGUI.3D need chinese font for displaying, you should found `NotoSansSC-Regular.ttf` from https://fonts.google.com/noto/specimen/Noto+Sans+SC and put it under ImGui.3D/ .
